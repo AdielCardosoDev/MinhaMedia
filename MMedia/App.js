@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet,Alert, Text, View, TextInput, TouchableOpacity, Keyboard } from 'react-native';
 
 export default function App() {
 
@@ -14,7 +14,11 @@ export default function App() {
   const div = x/4;
 
   function cal(){
-    setTotal(Number(n1) + Number(n2) + Number(n3) + Number(n4));
+    setTotal(Number(n1) + Number(n2) + Number(n3) + Number(n4));    
+    if(div >= 5){      
+      Alert.alert('ok');
+    }
+     Keyboard.dismiss()   
     
   }
   return (
@@ -46,7 +50,7 @@ export default function App() {
 
       
 
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -69,6 +73,7 @@ const styles = StyleSheet.create({
     textAlign:'center',
     marginTop:10,
     width:150,
+    color: '#ffff',
     borderBottomColor:'#fff'
   },
   btn:{
