@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet,Alert, Text, View, TextInput, TouchableOpacity, Keyboard } from 'react-native';
 
 export default function App() {
@@ -11,13 +11,17 @@ export default function App() {
   const [total, setTotal] = useState(0);
 
   const x = parseFloat(total);
-  const div = x/4;
+  const div = x / 4;
+
+  useEffect(()=> {
+    if(div >= 5){      
+      Alert.alert('Parabéns, vocé foi Aprovado com média ' + div + " !" );
+    }
+  }, [div])
 
   function cal(){
-    setTotal(Number(n1) + Number(n2) + Number(n3) + Number(n4));    
-    if(div >= 5){      
-      Alert.alert('ok');
-    }
+    setTotal(Number(n1) + Number(n2) + Number(n3) + Number(n4));
+    
      Keyboard.dismiss()   
     
   }
