@@ -25,6 +25,15 @@ export default function App() {
      Keyboard.dismiss()   
     
   }
+
+  function limpa(){
+    setN1('');
+    setN2('');
+    setN3('');
+    setN4('');
+    setTotal(0);   
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.titulo} >Minha Média</Text>
@@ -49,8 +58,12 @@ export default function App() {
         <Text  style={styles.btnText} >Calcular Média</Text>
       </TouchableOpacity>
 
-      <Text style={styles.resul} >Sua nota é {total.toFixed(1)} </Text>
-      <Text style={styles.resul} >Sua Média é {div.toFixed(1)} </Text>
+      <TouchableOpacity style={styles.btn} onPress={limpa} >
+        <Text style={styles.btnText}>Limpar Campos</Text>
+      </TouchableOpacity>
+
+      <Text style={styles.resul} >SUA NOTA É {total.toFixed(1)} </Text>
+      <Text style={styles.resul} >SUA MÉDIA É {div.toFixed(1)} </Text>
 
       
 
@@ -76,26 +89,28 @@ const styles = StyleSheet.create({
     borderBottomWidth:2,
     textAlign:'center',
     marginTop:10,
-    width:150,
+    width:250,
+    height:40,
     color: '#ffff',
     borderBottomColor:'#fff'
   },
   btn:{
     borderRadius:5,
     backgroundColor:'#E64A19',
-    width:180,
-    height:30,
+    width:250,
+    height:40,
     marginTop:10,
     justifyContent:'center'
   },
   btnText:{
-    color:'#fff',
+    color: '#ffff',
+    fontSize:18,
     textAlign:'center',    
   },
   resul:{
     fontSize:18,
     fontWeight:'bold',
-    marginTop:10,
+    marginTop:20,
     color:'#fff'
   }
 
