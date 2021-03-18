@@ -58,7 +58,7 @@ export default function App() {
         <Text  style={styles.btnText} >Calcular Média</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.btn} onPress={limpa} >
+      <TouchableOpacity style={styles.btn} onPress={limpa} activeOpacity={0.7}>
         <Text style={styles.btnText}>Limpar Campos</Text>
       </TouchableOpacity>
 
