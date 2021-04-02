@@ -65,6 +65,9 @@ export default function App() {
       <Text style={styles.resul} >SUA NOTA É {total.toFixed(1)} </Text>
       <Text style={styles.resul} >SUA MÉDIA É {div.toFixed(1)} </Text>
 
+
+      <Text style={styles.obs} > Se você tiver uma fração, use um ponto e não uma vírgula! </Text>
+
       
 
       <StatusBar style="light" />
@@ -112,6 +115,12 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     marginTop:20,
     color:'#fff'
+  },
+  obs:{
+    color:'#fff',
+    marginTop: 50,
+    fontWeight:'bold',
+    fontSize: 12
   }
 
 
