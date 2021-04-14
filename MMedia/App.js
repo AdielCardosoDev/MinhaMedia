@@ -38,18 +38,18 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.titulo} >Minha Média</Text>
 
-      <TextInput style={styles.input} maxLength={4} keyboardType='decimal-pad' placeholder='Primeira Nota'
+      <TextInput style={styles.input} maxLength={4} keyboardType='decimal-pad' placeholder='Primeira Nota' keyboardAppearance='dark'
       value={n1} onChangeText={(int)=> setN1(int)}
       />
       
-      <TextInput style={styles.input} maxLength={4} keyboardType='decimal-pad' placeholder='Segunda Nota'      
+      <TextInput style={styles.input} maxLength={4} keyboardType='number-pad' placeholder='Segunda Nota'      
       value={n2} onChangeText={(int)=> setN2(int)}
       />
-      <TextInput style={styles.input} maxLength={4} keyboardType='decimal-pad' placeholder='Terceira Nota'
+      <TextInput style={styles.input} maxLength={4} keyboardType='number-pad' placeholder='Terceira Nota'
       value={n3} onChangeText={(int)=> setN3(int)}
       />
       
-      <TextInput style={styles.input} maxLength={4} keyboardType='decimal-pad' placeholder='Quarta Nota'
+      <TextInput style={styles.input} maxLength={4} keyboardType='number-pad' placeholder='Quarta Nota'
       value={n4} onChangeText={(int)=> setN4(int)}
       />
 
@@ -66,7 +66,7 @@ export default function App() {
       <Text style={styles.resul} >SUA MÉDIA É {div.toFixed(1)} </Text>
 
 
-      <Text style={styles.obs} > Se você tiver uma fração, use um ponto e não uma vírgula! </Text>
+      <Text style={styles.obs} >EM CASO DE DÉCIMOS COLOCAR A VIRGULA!</Text>
 
       
 
