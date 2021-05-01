@@ -38,7 +38,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.titulo} >Minha Média</Text>
 
-      <TextInput style={styles.input} maxLength={4} keyboardType='decimal-pad' placeholder='Primeira Nota' keyboardAppearance='dark'
+      <TextInput style={styles.input} maxLength={4} keyboardType='number-pad' placeholder='Primeira Nota' keyboardAppearance='dark'
       value={n1} onChangeText={(int)=> setN1(int)}
       />
       

@@ -19,7 +19,7 @@
     "android": {
       "package": "com.acdeveloper.minhamedia",
       "versionCode": 3,  
-       "permissions": []           
+      "permissions": []           
     }
    
     
